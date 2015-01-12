@@ -1,6 +1,4 @@
 
-'use strict';
-
 angular.module('editBreakPointsApp', [])
     .run(function ($http, $rootScope){
         function onSuccess (result) {
@@ -12,8 +10,7 @@ angular.module('editBreakPointsApp', [])
             console.log(info);
         }
 
-        $http.get('')
-        .then(onSuccess, onFailure);
+        $http.get('https://api.github.com/users/manidf/repos').then(onSuccess, onFailure);
 
 
     });
