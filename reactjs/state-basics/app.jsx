@@ -1,6 +1,6 @@
 
 var App = React.createClass({
-    getInitialState:function(){
+    getInitialState: function(){
         return {
             txt: 'the state txt',
             id: 0

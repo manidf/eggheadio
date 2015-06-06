@@ -1,0 +1,16 @@
+{
+  "name": "reactjs",
+  "version": "1.0.0",
+  "description": "react tutorials",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-libs-browser": "^0.5.2",
+    "react": "^0.13.3",
+    "webpack": "^1.9.10"
+  }
+}
