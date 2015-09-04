@@ -1,6 +1,6 @@
 var ReactMixin = {
     getInitialState: function() {
-      return { count:0 }
+      return { count: 0 }
     },
     componentWillMount: function() {
      console.log('will mount!');
@@ -12,7 +12,7 @@ var ReactMixin = {
 
 var App = React.createClass({
    render: function() {
-       render (
+       return (
            <div>
                <Button txt="this is the button"></Button>
                <br/>
@@ -23,15 +23,20 @@ var App = React.createClass({
 });
 
 var Button = React.createClass({
+    mixins:[ReactMixin],
     render: function() {
-        return <button>{this.props.txt}</button>
+        return <button onClick={this.incrementCount}>{this.props.txt} - {this.state.count}</button>
     }
 });
 
 var Label = React.createClass({
-   render: function(){
-       return <label for="">{this.props.txt}</label>
-   }
+    mixins:[ReactMixin],
+    componentWillMount:function(){
+      setInterval(this.incrementCount, 1000)
+    },
+    render: function(){
+       return <label>{this.props.txt} - {this.state.count}</label>
+    }
 });
 
 React.render(<App />, document.body);
