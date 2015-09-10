@@ -29,4 +29,4 @@ var PersonRow = React.createClass({
     }
 });
 
-React.render(<PersonTable />, document.body);
+React.render(<PersonTable />, document.getElementById("PageContent"));
