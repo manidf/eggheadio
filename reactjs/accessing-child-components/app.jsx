@@ -6,7 +6,7 @@ var App = React.createClass({
 
 var Button = React.createClass({
     render: function() {
-        return <button>{this.props.children}</button>
+        return <button className="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">{this.props.children}</button>
     }
 });
 
